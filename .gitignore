@@ -1,0 +1,4 @@
+out/
+poscoffee.db
+lib/
+!lib/.gitkeep
