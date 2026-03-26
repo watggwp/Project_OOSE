@@ -1,8 +1,8 @@
 package ui;
 
+import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
-import java.awt.*;
 import model.ProductCategory;
 
 public class ProductEditorDialog extends JDialog {
@@ -59,28 +59,29 @@ public class ProductEditorDialog extends JDialog {
         GridBagConstraints g = new GridBagConstraints();
         g.fill = GridBagConstraints.HORIZONTAL;
         g.weightx = 1;
+        g.gridx = 0;
         g.insets = new Insets(8, 0, 8, 0);
 
         g.gridy = 0;
-        panel.add(new JLabel("Product Code *"));
+        panel.add(new JLabel("Product Code *"), g);
         g.gridy = 1;
         codeField.setPreferredSize(new Dimension(300, 38));
         panel.add(codeField, g);
 
         g.gridy = 2;
-        panel.add(new JLabel("Product Name *"));
+        panel.add(new JLabel("Product Name *"), g);
         g.gridy = 3;
         nameField.setPreferredSize(new Dimension(300, 38));
         panel.add(nameField, g);
 
         g.gridy = 4;
-        panel.add(new JLabel("Price (฿) *"));
+        panel.add(new JLabel("Price (฿) *"), g);
         g.gridy = 5;
         priceField.setPreferredSize(new Dimension(300, 38));
         panel.add(priceField, g);
 
         g.gridy = 6;
-        panel.add(new JLabel("Category *"));
+        panel.add(new JLabel("Category *"), g);
         g.gridy = 7;
         categoryCombo.setPreferredSize(new Dimension(300, 38));
         categoryCombo.setBackground(Color.WHITE);
