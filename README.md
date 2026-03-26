@@ -53,5 +53,26 @@ src/
 4. การรันครั้งแรก ระบบจะทำการสร้างฐานข้อมูลชื่อ `poscoffee.db` พร้อมสร้าง Table และเซ็ตสินค้าเมนูเริ่มต้น (Mock Data) ให้โดยอัตโนมัติ
 
 ## 📸 Screenshots (ภาพตัวอย่างแอปพลิเคชัน)
-<!-- แนะนำให้แคปภาพหน้าจอตอนโปรแกรมรันมาใส่ตรงนี้ครับ เช่น หน้า Login, Dashboard, หน้า Order ฯลฯ -->
-<!-- รูปแบบการใส่ภาพ: ![หน้าชื่ออะไร](ลิงก์รูปภาพในโฟลเดอร์ เช่น /images/login.png) -->
+
+### Welcome & Authentication
+![Welcome Screen](screenshots/welcome_POS.png)
+
+![Login Screen](screenshots/login.png)
+
+![Register Screen](screenshots/register.png)
+
+### Main Dashboard
+![Dashboard](screenshots/main.png)
+
+### Point of Sale (POS) & Checkout
+![Order Screen](screenshots/Order.png)
+
+![Payment Success](screenshots/pay_suss.png)
+
+### Menu Management
+![Manage Menu](screenshots/Menu_Manager.png)
+
+![Add Product](screenshots/Add_Menu.png)
+
+### Sales Analytics & Reports
+![Sales Report](screenshots/Report.png)
