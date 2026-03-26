@@ -125,12 +125,12 @@ public class POSAppFrame extends JFrame {
         logoLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         JLabel titleLabel = new JLabel("POS Coffee", SwingConstants.CENTER);
-        titleLabel.setFont(new Font("Dialog", Font.BOLD, 32));
+        titleLabel.setFont(new Font("Tahoma", Font.BOLD, 32));
         titleLabel.setForeground(DARK_COLOR);
         titleLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         JLabel subtitleLabel = new JLabel("Modern Point of Sale", SwingConstants.CENTER);
-        subtitleLabel.setFont(new Font("Dialog", Font.PLAIN, 16));
+        subtitleLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
         subtitleLabel.setForeground(new Color(127, 140, 141));
         subtitleLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
 
@@ -200,7 +200,7 @@ public class POSAppFrame extends JFrame {
         logoLabel.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 28));
         
         JLabel titleLabel = new JLabel("POS Coffee");
-        titleLabel.setFont(new Font("Dialog", Font.BOLD, 24));
+        titleLabel.setFont(new Font("Tahoma", Font.BOLD, 24));
         titleLabel.setForeground(DARK_COLOR);
 
         leftPanel.add(logoLabel);
@@ -218,7 +218,7 @@ public class POSAppFrame extends JFrame {
 
         JLabel userIcon = new JLabel("👤 ");
         userIcon.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 16));
-        currentUserLabel.setFont(new Font("Dialog", Font.BOLD, 14));
+        currentUserLabel.setFont(new Font("Tahoma", Font.BOLD, 14));
         currentUserLabel.setForeground(DARK_COLOR);
 
         userPanel.add(userIcon);
@@ -315,12 +315,12 @@ public class POSAppFrame extends JFrame {
         textPanel.setOpaque(false);
 
         JLabel titleLabel = new JLabel(title);
-        titleLabel.setFont(new Font("Dialog", Font.PLAIN, 13));
+        titleLabel.setFont(new Font("Tahoma", Font.PLAIN, 13));
         titleLabel.setForeground(new Color(127, 140, 141));
         titleLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         JLabel valueLabel = new JLabel(value);
-        valueLabel.setFont(new Font("Dialog", Font.BOLD, 20));
+        valueLabel.setFont(new Font("Tahoma", Font.BOLD, 20));
         valueLabel.setForeground(DARK_COLOR);
         valueLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
 
@@ -354,12 +354,12 @@ public class POSAppFrame extends JFrame {
         textPanel.setOpaque(false);
 
         JLabel titleLabel = new JLabel(title);
-        titleLabel.setFont(new Font("Dialog", Font.PLAIN, 13));
+        titleLabel.setFont(new Font("Tahoma", Font.PLAIN, 13));
         titleLabel.setForeground(new Color(127, 140, 141));
         titleLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         JLabel valueLabel = new JLabel(getCurrentTimeWithSeconds());
-        valueLabel.setFont(new Font("Dialog", Font.BOLD, 20));
+        valueLabel.setFont(new Font("Tahoma", Font.BOLD, 20));
         valueLabel.setForeground(DARK_COLOR);
         valueLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
 
@@ -422,12 +422,12 @@ public class POSAppFrame extends JFrame {
         iconLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         JLabel titleLabel = new JLabel(title);
-        titleLabel.setFont(new Font("Dialog", Font.BOLD, 20));
+        titleLabel.setFont(new Font("Tahoma", Font.BOLD, 20));
         titleLabel.setForeground(DARK_COLOR);
         titleLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         JLabel descLabel = new JLabel("<html><center>"+ description + "</center></html>");
-        descLabel.setFont(new Font("Dialog", Font.PLAIN, 13));
+        descLabel.setFont(new Font("Tahoma", Font.PLAIN, 13));
         descLabel.setForeground(new Color(127, 140, 141));
         descLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
 
@@ -460,7 +460,7 @@ public class POSAppFrame extends JFrame {
      */
     private JButton createModernButton(String text, Color bgColor, Color textColor) {
         JButton button = new JButton(text);
-        button.setFont(new Font("Dialog", Font.BOLD, 14));
+        button.setFont(new Font("Tahoma", Font.BOLD, 14));
         button.setBackground(bgColor);
         button.setForeground(textColor);
         button.setFocusPainted(false);
@@ -616,7 +616,7 @@ public class POSAppFrame extends JFrame {
         contentPanel.setBorder(new EmptyBorder(30, 30, 30, 30));
 
         JLabel messageLabel = new JLabel("<html><center>"+ message + "</center></html>");
-        messageLabel.setFont(new Font("Dialog", Font.PLAIN, 14));
+        messageLabel.setFont(new Font("Tahoma", Font.PLAIN, 14));
         messageLabel.setForeground(DARK_COLOR);
         messageLabel.setHorizontalAlignment(SwingConstants.CENTER);
 
@@ -661,6 +661,7 @@ public class POSAppFrame extends JFrame {
         SwingUtilities.invokeLater(() -> {
             try {
                 FlatIntelliJLaf.setup();
+                UIManager.put("defaultFont", new Font("Tahoma", Font.PLAIN, 14));
                 UIManager.put("Button.arc", 8);
                 UIManager.put("Component.arc", 8);
                 UIManager.put("ProgressBar.arc", 8);

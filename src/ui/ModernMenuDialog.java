@@ -46,7 +46,7 @@ public class ModernMenuDialog extends JDialog {
         p.setBorder(new EmptyBorder(18, 10, 18, 10));
 
         JLabel l = new JLabel("Menu Management");
-        l.setFont(new Font("Dialog", Font.BOLD, 20));
+        l.setFont(new Font("Tahoma", Font.BOLD, 20));
         l.setForeground(Color.WHITE);
         p.add(l);
 
@@ -77,8 +77,8 @@ public class ModernMenuDialog extends JDialog {
 
         JTable table = new JTable(tableModel);
         table.setRowHeight(30);
-        table.setFont(new Font("Dialog", Font.PLAIN, 14));
-        table.getTableHeader().setFont(new Font("Dialog", Font.BOLD, 14));
+        table.setFont(new Font("Tahoma", Font.PLAIN, 14));
+        table.getTableHeader().setFont(new Font("Tahoma", Font.BOLD, 14));
 
         JPanel panel = new JPanel(new BorderLayout());
         panel.setBorder(new EmptyBorder(20, 20, 20, 20));

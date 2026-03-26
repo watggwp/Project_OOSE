@@ -57,10 +57,20 @@ public class ModernReportDialog extends JDialog {
         p.setBackground(new Color(155, 89, 182));
         p.setBorder(new EmptyBorder(18, 20, 18, 20));
 
-        JLabel l = new JLabel("📈 Sales Analytics & Reports");
+        JPanel titlePanel = new JPanel(new FlowLayout(FlowLayout.LEFT, 10, 0));
+        titlePanel.setOpaque(false);
+        
+        JLabel icon = new JLabel("📈");
+        icon.setForeground(Color.WHITE);
+        icon.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 28));
+        
+        JLabel l = new JLabel("Sales Analytics & Reports");
         l.setForeground(Color.WHITE);
-        l.setFont(new Font("Dialog", Font.BOLD, 24));
-        p.add(l, BorderLayout.WEST);
+        l.setFont(new Font("Tahoma", Font.BOLD, 24));
+        
+        titlePanel.add(icon);
+        titlePanel.add(l);
+        p.add(titlePanel, BorderLayout.WEST);
 
         return p;
     }
@@ -100,25 +110,25 @@ public class ModernReportDialog extends JDialog {
 
         String[] ranges = { "Today", "This Week", "This Month", "This Year", "Custom Range" };
         timeRangeCombo = new JComboBox<>(ranges);
-        timeRangeCombo.setFont(new Font("Dialog", Font.PLAIN, 14));
+        timeRangeCombo.setFont(new Font("Tahoma", Font.PLAIN, 14));
 
         // --- แก้ไข: ปลดล็อคให้ช่องวันที่เลือกได้ตลอดเวลา ---
         startDateSpinner = new JSpinner(new SpinnerDateModel());
         JSpinner.DateEditor startEditor = new JSpinner.DateEditor(startDateSpinner, "dd/MM/yyyy");
         startDateSpinner.setEditor(startEditor);
-        startDateSpinner.setFont(new Font("Dialog", Font.PLAIN, 14));
+        startDateSpinner.setFont(new Font("Tahoma", Font.PLAIN, 14));
 
         endDateSpinner = new JSpinner(new SpinnerDateModel());
         JSpinner.DateEditor endEditor = new JSpinner.DateEditor(endDateSpinner, "dd/MM/yyyy");
         endDateSpinner.setEditor(endEditor);
-        endDateSpinner.setFont(new Font("Dialog", Font.PLAIN, 14));
+        endDateSpinner.setFont(new Font("Tahoma", Font.PLAIN, 14));
 
         timeRangeCombo.addActionListener(e -> updateDateSpinners());
 
         JButton genBtn = new JButton("Generate Report");
         genBtn.setBackground(new Color(52, 152, 219));
         genBtn.setForeground(Color.WHITE);
-        genBtn.setFont(new Font("Dialog", Font.BOLD, 14));
+        genBtn.setFont(new Font("Tahoma", Font.BOLD, 14));
         genBtn.addActionListener(e -> generateReport());
 
         p.add(new JLabel("Report Period:"));
@@ -162,10 +172,10 @@ public class ModernReportDialog extends JDialog {
                 new EmptyBorder(15, 10, 15, 10)));
 
         JLabel titleLabel = new JLabel(title, SwingConstants.CENTER);
-        titleLabel.setFont(new Font("Dialog", Font.PLAIN, 14));
+        titleLabel.setFont(new Font("Tahoma", Font.PLAIN, 14));
         titleLabel.setForeground(Color.GRAY);
 
-        valueLabel.setFont(new Font("Dialog", Font.BOLD, 28));
+        valueLabel.setFont(new Font("Tahoma", Font.BOLD, 28));
         valueLabel.setForeground(new Color(44, 62, 80));
 
         card.add(titleLabel, BorderLayout.NORTH);
@@ -366,7 +376,7 @@ public class ModernReportDialog extends JDialog {
 
                 // วาดข้อความแกน X (ถ้าชั่วโมงเยอะ จะวาดแนวสลับเพื่อไม่ให้ตัวหนังสือเบียดกัน)
                 g2.setColor(Color.DARK_GRAY);
-                g2.setFont(new Font("Dialog", Font.PLAIN, 10));
+                g2.setFont(new Font("Tahoma", Font.PLAIN, 10));
 
                 // เช็คว่าถ้าเป็น 24 ชั่วโมง ให้วาดตัวหนังสือสลับขึ้นลง (Z-zag)
                 // เพื่อไม่ให้ทับกัน
@@ -376,7 +386,7 @@ public class ModernReportDialog extends JDialog {
                 g2.setColor(new Color(230, 126, 34));
             }
 
-            g2.setFont(new Font("Dialog", Font.BOLD, 14));
+            g2.setFont(new Font("Tahoma", Font.BOLD, 14));
 
             g2.setColor(new Color(52, 152, 219));
             g2.fillOval(pad + 10, 20, 10, 10);

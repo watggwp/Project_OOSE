@@ -65,10 +65,20 @@ public class ModernOrderDialog extends JDialog {
         p.setBackground(new Color(52, 152, 219));
         p.setBorder(new EmptyBorder(15, 20, 15, 20));
 
-        JLabel l = new JLabel("🛒 New Order");
+        JPanel titlePanel = new JPanel(new FlowLayout(FlowLayout.LEFT, 10, 0));
+        titlePanel.setOpaque(false);
+        
+        JLabel icon = new JLabel("🛒");
+        icon.setForeground(Color.WHITE);
+        icon.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 28));
+        
+        JLabel l = new JLabel("New Order");
         l.setForeground(Color.WHITE);
-        l.setFont(new Font("Dialog", Font.BOLD, 24));
-        p.add(l, BorderLayout.WEST);
+        l.setFont(new Font("Tahoma", Font.BOLD, 24));
+        
+        titlePanel.add(icon);
+        titlePanel.add(l);
+        p.add(titlePanel, BorderLayout.WEST);
 
         return p;
     }
@@ -82,7 +92,7 @@ public class ModernOrderDialog extends JDialog {
         panel.setOpaque(false);
 
         JTabbedPane tabbedPane = new JTabbedPane();
-        tabbedPane.setFont(new Font("Dialog", Font.BOLD, 16));
+        tabbedPane.setFont(new Font("Tahoma", Font.BOLD, 16));
 
         // จัดกลุ่มสินค้าตาม Category
         Map<ProductCategory, List<Product>> groupedProducts = new EnumMap<>(ProductCategory.class);
@@ -101,7 +111,7 @@ public class ModernOrderDialog extends JDialog {
 
             for (Product p : products) {
                 JButton btn = new JButton();
-                btn.setText("<html><center><b style='font-size:14px;'>" + p.getName() + "</b><br><span style='color:#7f8c8d;'>฿" + p.getPrice() + "</span></center></html>");
+                btn.setText("<html><center><b style='font-size:14px;'>" + p.getName() + "</b><br><span style='color:#7f8c8d;'><nobr>฿" + String.format("%.2f", p.getPrice()) + "</nobr></span></center></html>");
                 btn.setBackground(Color.WHITE);
                 btn.setFocusPainted(false);
                 btn.setBorder(BorderFactory.createLineBorder(new Color(220, 221, 225), 2));
@@ -150,7 +160,7 @@ public class ModernOrderDialog extends JDialog {
         };
         cartTable = new JTable(cartTableModel);
         cartTable.setRowHeight(35);
-        cartTable.setFont(new Font("Dialog", Font.PLAIN, 14));
+        cartTable.setFont(new Font("Tahoma", Font.PLAIN, 14));
         cartTable.setSelectionMode(ListSelectionModel.SINGLE_SELECTION); // เลือกได้ทีละบรรทัด
         
         cartTable.getColumnModel().getColumn(0).setPreferredWidth(160);
@@ -189,34 +199,34 @@ public class ModernOrderDialog extends JDialog {
 
         gbc.gridx = 0; gbc.gridy = 0; gbc.weightx = 0.5;
         JLabel totalTextLabel = new JLabel("Grand Total:");
-        totalTextLabel.setFont(new Font("Dialog", Font.BOLD, 18));
+        totalTextLabel.setFont(new Font("Tahoma", Font.BOLD, 18));
         checkoutPanel.add(totalTextLabel, gbc);
 
         gbc.gridx = 1; gbc.weightx = 0.5;
         totalLabel = new JLabel("฿0.00", SwingConstants.RIGHT);
-        totalLabel.setFont(new Font("Dialog", Font.BOLD, 22));
+        totalLabel.setFont(new Font("Tahoma", Font.BOLD, 22));
         totalLabel.setForeground(new Color(231, 76, 60)); 
         checkoutPanel.add(totalLabel, gbc);
 
         gbc.gridx = 0; gbc.gridy = 1;
         JLabel cashTextLabel = new JLabel("Cash Given (฿):");
-        cashTextLabel.setFont(new Font("Dialog", Font.PLAIN, 16));
+        cashTextLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
         checkoutPanel.add(cashTextLabel, gbc);
 
         gbc.gridx = 1;
         cashField = new JTextField();
-        cashField.setFont(new Font("Dialog", Font.BOLD, 18));
+        cashField.setFont(new Font("Tahoma", Font.BOLD, 18));
         cashField.setHorizontalAlignment(JTextField.RIGHT);
         checkoutPanel.add(cashField, gbc);
 
         gbc.gridx = 0; gbc.gridy = 2;
         JLabel changeTextLabel = new JLabel("Change:");
-        changeTextLabel.setFont(new Font("Dialog", Font.BOLD, 18));
+        changeTextLabel.setFont(new Font("Tahoma", Font.BOLD, 18));
         checkoutPanel.add(changeTextLabel, gbc);
 
         gbc.gridx = 1;
         changeLabel = new JLabel("฿0.00", SwingConstants.RIGHT);
-        changeLabel.setFont(new Font("Dialog", Font.BOLD, 22));
+        changeLabel.setFont(new Font("Tahoma", Font.BOLD, 22));
         changeLabel.setForeground(new Color(46, 204, 113)); 
         checkoutPanel.add(changeLabel, gbc);
 
@@ -227,13 +237,13 @@ public class ModernOrderDialog extends JDialog {
         JButton clearBtn = new JButton("Clear Cart");
         clearBtn.setBackground(new Color(149, 165, 166));
         clearBtn.setForeground(Color.WHITE);
-        clearBtn.setFont(new Font("Dialog", Font.BOLD, 14));
+        clearBtn.setFont(new Font("Tahoma", Font.BOLD, 14));
         clearBtn.addActionListener(e -> clearCart());
 
         JButton payBtn = new JButton("Pay & Complete");
         payBtn.setBackground(new Color(46, 204, 113));
         payBtn.setForeground(Color.WHITE);
-        payBtn.setFont(new Font("Dialog", Font.BOLD, 14));
+        payBtn.setFont(new Font("Tahoma", Font.BOLD, 14));
         payBtn.setPreferredSize(new Dimension(0, 45));
         payBtn.addActionListener(e -> processPayment());
 
@@ -255,7 +265,7 @@ public class ModernOrderDialog extends JDialog {
         JButton btn = new JButton(text);
         btn.setBackground(color);
         btn.setForeground(Color.WHITE);
-        btn.setFont(new Font("Dialog", Font.BOLD, 13));
+        btn.setFont(new Font("Tahoma", Font.BOLD, 13));
         btn.setMargin(new Insets(2, 8, 2, 8));
         btn.setFocusPainted(false);
         return btn;

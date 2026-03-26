@@ -38,7 +38,7 @@ public class ModernRegisterDialog extends JDialog {
 
         JLabel l = new JLabel("Register");
         l.setForeground(Color.WHITE);
-        l.setFont(new Font("Dialog", Font.BOLD, 20));
+        l.setFont(new Font("Tahoma", Font.BOLD, 20));
         p.add(l);
 
         return p;
