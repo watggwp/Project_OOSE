@@ -3,6 +3,7 @@
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
 ![Java Swing](https://img.shields.io/badge/Java_Swing-GUI-blue?style=for-the-badge)
+![Dowload](https://mailrmuttac-my.sharepoint.com/:u:/g/personal/1166104003627_mail_rmutt_ac_th/IQD1DOuaUrPdQ5NATjMCGmH0AXmM_Gz1OweBmzpNfwOuDXg?e=Qss7de)
 
 โปรเจกต์มินิแอปพลิเคชันระบบจัดการร้านกาแฟ (Point of Sale) พัฒนาด้วย **Java (Swing)** จัดทำขึ้นเพื่อเป็นโปรเจกต์ (Mini Project) โดยเน้นสถาปัตยกรรมการออกแบบที่สะอาด เป็นระเบียบ (Layered Design / MVC) และ User Interface ที่ดูทันสมัยน่าใช้งาน 
 
