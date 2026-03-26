@@ -54,15 +54,16 @@ src/
 
 ## 📸 Screenshots (ภาพตัวอย่างแอปพลิเคชัน)
 
-### Welcome & Authentication
-![Welcome Screen](screenshots/welcome_POS.png)
+### Main Dashboard
+![Dashboard](screenshots/main.png)
+
+### Authentication & Welcome
 
 ![Login Screen](screenshots/login.png)
 
 ![Register Screen](screenshots/register.png)
 
-### Main Dashboard
-![Dashboard](screenshots/main.png)
+![Welcome Screen](screenshots/welcome_POS.png)
 
 ### Point of Sale (POS) & Checkout
 ![Order Screen](screenshots/Order.png)
